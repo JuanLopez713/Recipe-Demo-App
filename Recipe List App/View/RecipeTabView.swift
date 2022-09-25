@@ -8,22 +8,32 @@
 import SwiftUI
 
 struct RecipeTabView: View {
-    @State var tabTag = 0;
+    @State var tabTag = 0
     var body: some View {
-        TabView (selection: $tabTag) {
-            Text("Featured View")
-                .tabItem {
-                    VStack {
-                        Image(systemName: "star.fill")
-                        Text("Featured")
-                    }
-                }.tag(0)
-            Button("Take me to Recipes", action: {tabTag = 2}).tabItem{
-                VStack{
+        TabView(selection: $tabTag) {
+            VStack {
+                Text("Featured View")
+                Text("This tab's tag is " + String(tabTag))
+            }
+
+            .tabItem {
+                VStack {
+                    Image(systemName: "star.fill")
+                    Text("Featured")
+                }
+            }.tag(0)
+
+            VStack {
+                Text("This tab's tag is " + String(tabTag))
+                Button("Take me to Recipes", action: { tabTag = 2 })
+            }.tabItem {
+                VStack {
                     Image(systemName: "star.fill")
                     Text("Demo")
                 }
-            }.tag(1)
+            }
+
+            .tag(1)
             RecipeContentView().tabItem {
                 VStack {
                     Image(systemName: "list.bullet")
