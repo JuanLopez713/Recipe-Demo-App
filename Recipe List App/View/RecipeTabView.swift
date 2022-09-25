@@ -11,6 +11,7 @@ struct RecipeTabView: View {
     @State var tabTag = 0
     var body: some View {
         TabView(selection: $tabTag) {
+            Rectangle().frame(width: 100, height: 100)
             VStack {
                 Text("Featured View")
                 Text("This tab's tag is " + String(tabTag))
