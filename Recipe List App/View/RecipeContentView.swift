@@ -11,7 +11,6 @@ struct RecipeContentView: View {
     // Reference the recipe model
     @ObservedObject var recipeList = RecipeModel()
     var body: some View {
-        Text("Hello")
         NavigationView {
             List(recipeList.recipes) { r in
                 NavigationLink(destination: RecipeDetailView(recipe: r), label: {
