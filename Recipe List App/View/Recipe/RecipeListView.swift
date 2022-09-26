@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RecipeContentView: View {
+struct RecipeListView: View {
     // Reference the recipe model
 //    @ObservedObject var recipeList = RecipeModel()
     @EnvironmentObject var recipeList: RecipeModel
@@ -50,7 +50,7 @@ struct RecipeContentView: View {
 
 struct RecipeContentView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeContentView()
+        RecipeListView()
             .environmentObject(RecipeModel())
     }
 }
