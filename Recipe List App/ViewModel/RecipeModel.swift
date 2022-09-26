@@ -8,6 +8,8 @@
 import Foundation
 
 class RecipeModel: ObservableObject {
+    @Published var showIngredients = true
+    @Published var showDirections = true
     @Published var recipes = [Recipe]()
     init() {
         // parse the local json file

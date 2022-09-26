@@ -19,13 +19,10 @@ struct RecipeTabView: View {
                     }
                 }.tag(0)
 
-            VStack {
-                Text("This tab's tag is " + String(tabTag))
-                Button("Take me to Recipes", action: { tabTag = 2 })
-            }.tabItem {
+            RectangleView().tabItem {
                 VStack {
                     Image(systemName: "star.fill")
-                    Text("Demo")
+                    Text("Rectangle")
                 }
             }
             .tag(1)
@@ -35,6 +32,11 @@ struct RecipeTabView: View {
                     Text("List")
                 }
             }.tag(2)
+            SettingsView().tabItem{
+                VStack{
+                    Image(systemName: "gearshape")
+                }
+            }.tag(3)
         }
         .environmentObject(RecipeModel())
     }

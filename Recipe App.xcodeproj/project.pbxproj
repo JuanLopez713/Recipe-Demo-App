@@ -25,6 +25,7 @@
 		0D52958128E12AAE00529EBC /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D52958028E12AAE00529EBC /* recipes.json */; };
 		0D52958328E12B0F00529EBC /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D52958228E12B0F00529EBC /* Ingredient.swift */; };
 		0D52958528E1326A00529EBC /* RecipeFeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D52958428E1326A00529EBC /* RecipeFeaturedView.swift */; };
+		0D52958728E13A0D00529EBC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D52958628E13A0D00529EBC /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		0D52958028E12AAE00529EBC /* recipes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recipes.json; sourceTree = "<group>"; };
 		0D52958228E12B0F00529EBC /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		0D52958428E1326A00529EBC /* RecipeFeaturedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeaturedView.swift; sourceTree = "<group>"; };
+		0D52958628E13A0D00529EBC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				0D52957728DFC7FE00529EBC /* RecipeDetailView.swift */,
 				0D52957E28E0C24100529EBC /* RectangleView.swift */,
 				0D52953C28DFA0F300529EBC /* ContentView.swift */,
+				0D52958628E13A0D00529EBC /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				0D52957F28E0C24100529EBC /* RectangleView.swift in Sources */,
 				0D52957328DFB48700529EBC /* DataService.swift in Sources */,
 				0D52953B28DFA0F300529EBC /* Recipe_App.swift in Sources */,
+				0D52958728E13A0D00529EBC /* SettingsView.swift in Sources */,
 				0D52958328E12B0F00529EBC /* Ingredient.swift in Sources */,
 				0D52957128DFB2D000529EBC /* RecipeContentView.swift in Sources */,
 			);
