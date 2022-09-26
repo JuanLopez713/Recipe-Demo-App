@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RectangleView: View {
+struct GeometryDemoView: View {
     var body: some View {
         VStack(spacing: 0.0) {
             GeometryReader { geo in
@@ -52,9 +52,9 @@ struct RectangleView: View {
     }
 }
 
-struct RectangleView_Previews: PreviewProvider {
+struct GeometryDemoView_Previews: PreviewProvider {
     static var previews: some View {
-        RectangleView()
+        GeometryDemoView()
     }
 }
 
