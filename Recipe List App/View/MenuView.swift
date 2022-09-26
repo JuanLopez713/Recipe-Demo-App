@@ -11,6 +11,10 @@ struct MenuView: View {
     @State var locationOption = "Chicago"
     @State var menuOption = "Pupusas"
     @State var timeOption = "5 PM"
+
+    var locationList = ["Chicago", "Los Angeles", "Honolulu", "New York City"]
+    var menuList = ["Pupusas", "Pizza", "Tacos", "Burritos"]
+    var timeList = ["5 PM", "6 PM", "7 PM", "8 PM", "9 PM"]
     var body: some View {
         VStack(alignment: .leading, spacing: 0.0) {
             Text("Ottimo Ristorante")
@@ -24,8 +28,9 @@ struct MenuView: View {
                         .font(.title)
 
                     Picker("Location", selection: $locationOption) {
-                        Text("Chicago").tag("Chicago")
-                        Text("Los Angeles").tag("Los Angeles")
+                        ForEach(locationList, id: \.self) { location in
+                            Text(location).tag(location)
+                        }
                     }
                 }
                 .padding(.bottom, 20)
@@ -34,9 +39,9 @@ struct MenuView: View {
                         .padding(.bottom, 20)
                         .font(.title)
                     Picker("Order", selection: $menuOption) {
-                        Text("Pupusas").tag("Pupusas")
-                        Text("Pizza").tag("Pizza")
-                        Text("Burrito").tag("Burrito")
+                        ForEach(menuList, id: \.self) { menu in
+                            Text(menu).tag(menu)
+                        }
                     }.pickerStyle(WheelPickerStyle())
                         .padding(.bottom, 20)
                 }
@@ -46,16 +51,22 @@ struct MenuView: View {
                     .font(.title)
 
                 Picker("PickupTime", selection: $timeOption) {
-                    Text("5 PM").tag("5 PM")
-                    Text("6 PM").tag("6 PM")
-                    Text("7 PM").tag("7 PM")
-                    Text("8 PM").tag("8 PM")
-                    Text("9 PM").tag("9 PM")
+                    ForEach(timeList, id: \.self) { time in
+                        Text(time).tag(time)
+                    }
                 }.pickerStyle(SegmentedPickerStyle())
                     .padding(.bottom, 20)
 
                 Text("Your will pickup your \(menuOption) from our restaurant in \(locationOption) at \(timeOption)")
-                Spacer()
+                    .padding(.bottom, 20)
+                GeometryReader { geo in
+                    Button("Pick for Me!") {
+                        locationOption = locationList[Int.random(in: 0 ..< locationList.count)]
+
+                        menuOption = menuList[Int.random(in: 0 ..< menuList.count)]
+                        timeOption = timeList[Int.random(in: 0 ..< timeList.count)]
+                    }.bold().frame(width: geo.size.width, alignment: .center).foregroundColor(.green)
+                }
             }
             .padding(.all, 20.0)
         }
