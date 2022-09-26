@@ -23,18 +23,18 @@ struct MenuView: View {
                 .font(.largeTitle)
                 .bold()
             VStack(alignment: .leading) {
-                HStack {
-                    Text("Location: ")
-                        .font(.title)
+                VStack(alignment: .leading, spacing: 0.0) {
+                    HStack {
+                        Text("Location: ")
+                            .font(.title)
 
-                    Picker("Location", selection: $locationOption) {
-                        ForEach(locationList, id: \.self) { location in
-                            Text(location).tag(location)
+                        Picker("Location", selection: $locationOption) {
+                            ForEach(locationList, id: \.self) { location in
+                                Text(location).tag(location)
+                            }
                         }
                     }
-                }
-                .padding(.bottom, 20)
-                VStack(alignment: .leading, spacing: 0.0) {
+                    .padding(.bottom, 20)
                     Text("Order:")
                         .padding(.bottom, 20)
                         .font(.title)
@@ -44,28 +44,31 @@ struct MenuView: View {
                         }
                     }.pickerStyle(WheelPickerStyle())
                         .padding(.bottom, 20)
-                }
-                Text("Pickup Time:")
-                    .multilineTextAlignment(.leading)
-                    .padding(.bottom, 20)
-                    .font(.title)
+                    Text("Pickup Time:")
+                        .multilineTextAlignment(.leading)
+                        .padding(.bottom, 20)
+                        .font(.title)
 
-                Picker("PickupTime", selection: $timeOption) {
-                    ForEach(timeList, id: \.self) { time in
-                        Text(time).tag(time)
-                    }
-                }.pickerStyle(SegmentedPickerStyle())
-                    .padding(.bottom, 20)
-
-                Text("Your will pickup your \(menuOption) from our restaurant in \(locationOption) at \(timeOption)")
-                    .padding(.bottom, 20)
+                    Picker("PickupTime", selection: $timeOption) {
+                        ForEach(timeList, id: \.self) { time in
+                            Text(time).tag(time)
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
+                        .padding(.bottom)
+                    Text("Your will pickup your \(menuOption) from our restaurant in \(locationOption) at \(timeOption)")
+                        .frame(height: 50)
+                }.padding(.bottom, 20)
                 GeometryReader { geo in
-                    Button("Pick for Me!") {
-                        locationOption = locationList[Int.random(in: 0 ..< locationList.count)]
+                    VStack(alignment: .center) {
+                        Button("Pick for Me!") {
+                            locationOption = locationList[Int.random(in: 0 ..< locationList.count)]
 
-                        menuOption = menuList[Int.random(in: 0 ..< menuList.count)]
-                        timeOption = timeList[Int.random(in: 0 ..< timeList.count)]
-                    }.bold().frame(width: geo.size.width, alignment: .center).foregroundColor(.green)
+                            menuOption = menuList[Int.random(in: 0 ..< menuList.count)]
+                            timeOption = timeList[Int.random(in: 0 ..< timeList.count)]
+                        }.bold()
+                            .buttonStyle(.bordered)
+
+                    }.frame(width: geo.size.width)
                 }
             }
             .padding(.all, 20.0)
