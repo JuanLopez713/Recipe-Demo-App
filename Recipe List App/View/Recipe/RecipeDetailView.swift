@@ -9,14 +9,36 @@ import SwiftUI
 
 struct RecipeDetailView: View {
     @EnvironmentObject var recipeList: RecipeModel
+    @State var servingSelection = 2
     var recipe: Recipe
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                // MARK: Image
+                // MARK: Recipe Image
 
                 Image(recipe.image).resizable().scaledToFill()
+
+                // MARK: Recipe Name
+
+                Text(recipe.name)
+                    .font(.largeTitle)
+                    .bold()
+                    .padding([.leading, .trailing], 20)
+                    .padding(.bottom, 5)
+
+                // MARK: Serving Size Picker
+
+                VStack(alignment: .leading) {
+                    Text("Serving Size").font(.headline)
+                    Picker("Serving Size", selection: $servingSelection) {
+                        Text("2").tag(2)
+                        Text("4").tag(4)
+                        Text("6").tag(6)
+                        Text("8").tag(8)
+                    }.pickerStyle(SegmentedPickerStyle())
+                }
+                .padding([.leading, .bottom, .trailing], 20.0)
 
                 // MARK: Ingredients
 
@@ -25,10 +47,10 @@ struct RecipeDetailView: View {
                         Text("Ingredients").font(.headline).padding(.vertical, 5)
                         ForEach(recipe.ingredients) { ingredient in
 
-                            Text("• " + ingredient.name)
+                            Text("• " + RecipeModel.getPortion(ingredient: ingredient, recipeServings: recipe.servings, targetServing: servingSelection) + " " + ingredient.name.lowercased())
                                 .padding(.bottom, 3.0)
                         }
-                    }.padding(.horizontal)
+                    }.padding(.horizontal, 20)
                 }
 
                 // MARK: Directions
@@ -43,10 +65,11 @@ struct RecipeDetailView: View {
                                 .padding(.bottom, 3.0)
                         }
                     }
-                    .padding(.horizontal)
+                    .padding(.horizontal, 20)
                 }
             }
-            .padding(.bottom)
+            .cornerRadius(20)
+            .shadow(radius: 20)
         }.navigationBarTitle(recipe.name)
     }
 }
@@ -54,7 +77,7 @@ struct RecipeDetailView: View {
 struct RecipeDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let recipeList = RecipeModel()
-        RecipeDetailView(recipe: recipeList.recipes[0])
+        RecipeDetailView(recipe: recipeList.recipes[1])
             .environmentObject(RecipeModel())
     }
 }
