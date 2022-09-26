@@ -27,6 +27,8 @@
 		0D52958528E1326A00529EBC /* RecipeFeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D52958428E1326A00529EBC /* RecipeFeaturedView.swift */; };
 		0D52958728E13A0D00529EBC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D52958628E13A0D00529EBC /* SettingsView.swift */; };
 		0DB2EDE228E171440025F4A8 /* RectangleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB2EDE128E171440025F4A8 /* RectangleCardView.swift */; };
+		0DB2EDE428E1F6FD0025F4A8 /* RectangleHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB2EDE328E1F6FD0025F4A8 /* RectangleHorizontalView.swift */; };
+		0DB2EDE628E1F90C0025F4A8 /* RectangleVerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB2EDE528E1F90C0025F4A8 /* RectangleVerticalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		0D52958428E1326A00529EBC /* RecipeFeaturedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeaturedView.swift; sourceTree = "<group>"; };
 		0D52958628E13A0D00529EBC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0DB2EDE128E171440025F4A8 /* RectangleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCardView.swift; sourceTree = "<group>"; };
+		0DB2EDE328E1F6FD0025F4A8 /* RectangleHorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleHorizontalView.swift; sourceTree = "<group>"; };
+		0DB2EDE528E1F90C0025F4A8 /* RectangleVerticalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleVerticalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,8 @@
 				0D52953C28DFA0F300529EBC /* ContentView.swift */,
 				0D52958628E13A0D00529EBC /* SettingsView.swift */,
 				0DB2EDE128E171440025F4A8 /* RectangleCardView.swift */,
+				0DB2EDE328E1F6FD0025F4A8 /* RectangleHorizontalView.swift */,
+				0DB2EDE528E1F90C0025F4A8 /* RectangleVerticalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -344,10 +350,12 @@
 				0D52957828DFC7FE00529EBC /* RecipeDetailView.swift in Sources */,
 				0D52956D28DFAEE800529EBC /* Recipe.swift in Sources */,
 				0D52958528E1326A00529EBC /* RecipeFeaturedView.swift in Sources */,
+				0DB2EDE628E1F90C0025F4A8 /* RectangleVerticalView.swift in Sources */,
 				0D52956F28DFB24500529EBC /* RecipeModel.swift in Sources */,
 				0D52953D28DFA0F300529EBC /* ContentView.swift in Sources */,
 				0D52957F28E0C24100529EBC /* RectangleView.swift in Sources */,
 				0D52957328DFB48700529EBC /* DataService.swift in Sources */,
+				0DB2EDE428E1F6FD0025F4A8 /* RectangleHorizontalView.swift in Sources */,
 				0DB2EDE228E171440025F4A8 /* RectangleCardView.swift in Sources */,
 				0D52953B28DFA0F300529EBC /* Recipe_App.swift in Sources */,
 				0D52958728E13A0D00529EBC /* SettingsView.swift in Sources */,
