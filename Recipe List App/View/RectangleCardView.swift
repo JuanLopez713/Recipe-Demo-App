@@ -10,10 +10,12 @@ import SwiftUI
 struct RectangleCardView: View {
     var randImage = ["1.circle", "2.circle", "3.circle", "4.circle", "5.circle", "6.circle", "7.circle", "8.circle", "9.circle", "10.circle"]
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 0.0) {
             Text("Swipeable Rectangles")
+                .padding(.leading, 20.0)
+                .padding(.top, 40.0)
                 .font(.largeTitle)
-                .padding([.top, .leading, .bottom])
+                .bold()
             GeometryReader { geo in
                 TabView {
                     ForEach(0 ... 50, id: \.self) { _ in
