@@ -26,6 +26,7 @@
 		0D52958328E12B0F00529EBC /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D52958228E12B0F00529EBC /* Ingredient.swift */; };
 		0D52958528E1326A00529EBC /* RecipeFeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D52958428E1326A00529EBC /* RecipeFeaturedView.swift */; };
 		0D52958728E13A0D00529EBC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D52958628E13A0D00529EBC /* SettingsView.swift */; };
+		0DB2EDE228E171440025F4A8 /* RectangleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB2EDE128E171440025F4A8 /* RectangleCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		0D52958228E12B0F00529EBC /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		0D52958428E1326A00529EBC /* RecipeFeaturedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeaturedView.swift; sourceTree = "<group>"; };
 		0D52958628E13A0D00529EBC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0DB2EDE128E171440025F4A8 /* RectangleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				0D52957E28E0C24100529EBC /* RectangleView.swift */,
 				0D52953C28DFA0F300529EBC /* ContentView.swift */,
 				0D52958628E13A0D00529EBC /* SettingsView.swift */,
+				0DB2EDE128E171440025F4A8 /* RectangleCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				0D52953D28DFA0F300529EBC /* ContentView.swift in Sources */,
 				0D52957F28E0C24100529EBC /* RectangleView.swift in Sources */,
 				0D52957328DFB48700529EBC /* DataService.swift in Sources */,
+				0DB2EDE228E171440025F4A8 /* RectangleCardView.swift in Sources */,
 				0D52953B28DFA0F300529EBC /* Recipe_App.swift in Sources */,
 				0D52958728E13A0D00529EBC /* SettingsView.swift in Sources */,
 				0D52958328E12B0F00529EBC /* Ingredient.swift in Sources */,
