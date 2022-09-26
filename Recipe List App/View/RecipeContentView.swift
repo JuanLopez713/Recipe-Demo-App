@@ -9,7 +9,8 @@ import SwiftUI
 
 struct RecipeContentView: View {
     // Reference the recipe model
-    @ObservedObject var recipeList = RecipeModel()
+//    @ObservedObject var recipeList = RecipeModel()
+    @EnvironmentObject var recipeList:RecipeModel
     var body: some View {
         NavigationView {
             List(recipeList.recipes) { r in

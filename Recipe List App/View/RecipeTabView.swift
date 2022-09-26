@@ -11,18 +11,13 @@ struct RecipeTabView: View {
     @State var tabTag = 0
     var body: some View {
         TabView(selection: $tabTag) {
-            Rectangle().frame(width: 100, height: 100)
-            VStack {
-                Text("Featured View")
-                Text("This tab's tag is " + String(tabTag))
-            }
-
-            .tabItem {
-                VStack {
-                    Image(systemName: "star.fill")
-                    Text("Featured")
-                }
-            }.tag(0)
+            RecipeFeaturedView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "star.fill")
+                        Text("Featured")
+                    }
+                }.tag(0)
 
             VStack {
                 Text("This tab's tag is " + String(tabTag))
@@ -33,7 +28,6 @@ struct RecipeTabView: View {
                     Text("Demo")
                 }
             }
-
             .tag(1)
             RecipeContentView().tabItem {
                 VStack {
@@ -42,6 +36,7 @@ struct RecipeTabView: View {
                 }
             }.tag(2)
         }
+        .environmentObject(RecipeModel())
     }
 }
 
