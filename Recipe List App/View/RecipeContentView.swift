@@ -18,7 +18,12 @@ struct RecipeContentView: View {
                     // MARK: Row Item
 
                     HStack(spacing: 20.0) {
-                        Image(r.image).resizable().scaledToFill().frame(width: 100, height: 100, alignment: .center).clipped().cornerRadius(5)
+                        Image(r.image)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 75, height: 75, alignment: .center)
+                            .clipped()
+                            .cornerRadius(5)
                         Text(r.name)
                     }
                 })
@@ -31,5 +36,6 @@ struct RecipeContentView: View {
 struct RecipeContentView_Previews: PreviewProvider {
     static var previews: some View {
         RecipeContentView()
+            .environmentObject(RecipeModel())
     }
 }

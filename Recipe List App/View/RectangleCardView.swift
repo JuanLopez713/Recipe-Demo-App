@@ -13,7 +13,7 @@ struct RectangleCardView: View {
         VStack(alignment: .leading) {
             Text("Swipeable Rectangles")
                 .font(.largeTitle)
-                .padding([.leading, .bottom])
+                .padding([.top, .leading, .bottom])
             GeometryReader { geo in
                 TabView {
                     ForEach(0 ... 50, id: \.self) { _ in

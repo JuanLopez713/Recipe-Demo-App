@@ -21,7 +21,7 @@ struct RecipeTabView: View {
 
             RectangleCardView().tabItem {
                 VStack {
-                    Image(systemName: "star.fill")
+                    Image(systemName: "repeat.1.circle")
                     Text("Rectangle")
                 }
             }
