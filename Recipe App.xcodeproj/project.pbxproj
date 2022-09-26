@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D2B5C1628E26A3800CA9BC0 /* RecipeHighlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2B5C1528E26A3800CA9BC0 /* RecipeHighlights.swift */; };
 		0D52953B28DFA0F300529EBC /* Recipe_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D52953A28DFA0F300529EBC /* Recipe_App.swift */; };
 		0D52953F28DFA0F400529EBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D52953E28DFA0F400529EBC /* Assets.xcassets */; };
 		0D52954328DFA0F400529EBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D52954228DFA0F400529EBC /* Preview Assets.xcassets */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D2B5C1528E26A3800CA9BC0 /* RecipeHighlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeHighlights.swift; sourceTree = "<group>"; };
 		0D52953728DFA0F300529EBC /* Recipe App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D52953A28DFA0F300529EBC /* Recipe_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe_App.swift; sourceTree = "<group>"; };
 		0D52953E28DFA0F400529EBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				0DB2EDEA28E1FDEC0025F4A8 /* Rectangle */,
 				0D52958628E13A0D00529EBC /* SettingsView.swift */,
 				0DB2EDED28E1FFB40025F4A8 /* Tutorials */,
+				0D2B5C1528E26A3800CA9BC0 /* RecipeHighlights.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			files = (
 				0D52957D28E0BA4400529EBC /* RecipeTabView.swift in Sources */,
 				0D52957828DFC7FE00529EBC /* RecipeDetailView.swift in Sources */,
+				0D2B5C1628E26A3800CA9BC0 /* RecipeHighlights.swift in Sources */,
 				0D52956D28DFAEE800529EBC /* Recipe.swift in Sources */,
 				0D52958528E1326A00529EBC /* RecipeFeaturedView.swift in Sources */,
 				0DB2EDE628E1F90C0025F4A8 /* RectangleVerticalView.swift in Sources */,

@@ -10,7 +10,7 @@ import SwiftUI
 struct MenuView: View {
     @EnvironmentObject var menuList: RecipeModel
     @State var locationOption = "Chicago"
-    @State var menuOption = "Eggplant Parmesan"
+    @State var menuOption = "Test Food"
     @State var timeOption = "5 PM"
 
     var locationList = ["Chicago", "Los Angeles", "Honolulu", "New York City"]
@@ -77,6 +77,12 @@ struct MenuView: View {
             }
             .padding(.all, 20.0)
         }
+        .onAppear {
+            setInitialMenuIndex()
+        }
+    }
+    func setInitialMenuIndex(){
+        menuOption = menuList.recipes[0].name
     }
 }
 
@@ -86,3 +92,5 @@ struct MenuView_Previews: PreviewProvider {
             .environmentObject(RecipeModel())
     }
 }
+
+
