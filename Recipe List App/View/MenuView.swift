@@ -57,7 +57,7 @@ struct MenuView: View {
                 Text("Your will pickup your \(menuOption) from our restaurant in \(locationOption) at \(timeOption)")
                 Spacer()
             }
-            .padding([.leading, .bottom, .trailing], 20.0)
+            .padding(.all, 20.0)
         }
     }
 }
