@@ -29,7 +29,7 @@ struct MenuView: View {
                 VStack(alignment: .leading, spacing: 0.0) {
                     HStack {
                         Text("Location: ")
-                            .font(.title)
+                            .font(.headline)
 
                         Picker("Location", selection: $locationOption) {
 
@@ -40,8 +40,8 @@ struct MenuView: View {
                     }
                     .padding(.bottom, 20)
                     Text("Order:")
-                        .padding(.bottom, 20)
-                        .font(.title)
+                   //.padding(.bottom, 20)
+                        .font(.headline)
                     Picker("Order", selection: $menuOption) {
                         ForEach(menuList.recipes) { menu in
                             Text(menu.name).tag(menu.name)
@@ -51,7 +51,7 @@ struct MenuView: View {
                     Text("Pickup Time:")
                         .multilineTextAlignment(.leading)
                         .padding(.bottom, 20)
-                        .font(.title)
+                        .font(.headline)
 
                     Picker("PickupTime", selection: $timeOption) {
                         ForEach(timeList, id: \.self) { time in
