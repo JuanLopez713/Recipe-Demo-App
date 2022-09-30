@@ -10,7 +10,7 @@ import SwiftUI
 struct RecipeHighlights: View {
     var allHighlights = ""
     var body: some View {
-        Text(allHighlights)
+        Text(allHighlights).font(Font.custom("Avenir", size: 16))
         
     }
     

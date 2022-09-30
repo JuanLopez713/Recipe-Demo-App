@@ -23,7 +23,7 @@ struct MenuView: View {
             Text("Ottimo Ristorante")
                 .padding(.leading, 20.0)
                 .padding(.top, 40.0)
-                .font(.largeTitle)
+                .font(Font.custom("Avenir Heavy", size: 24))
                 .bold()
             VStack(alignment: .leading) {
                 VStack(alignment: .leading, spacing: 0.0) {

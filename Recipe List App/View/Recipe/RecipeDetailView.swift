@@ -15,75 +15,72 @@ struct RecipeDetailView: View {
     var body: some View {
         GeometryReader { geo in
             ScrollView {
-                
                 VStack(alignment: .leading) {
                     // MARK: Recipe Image
 
-                    
-                    
-                            Image(recipe.image)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: geo.size.width, height: geo.size.height/4)
-                                .clipped()
-                            // MARK: Recipe Name
+                    Image(recipe.image)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: geo.size.width, height: geo.size.height / 4)
+                        .clipped()
 
-                            Text(recipe.name)
-                                .font(.largeTitle)
-                                .bold()
-                                .padding([.leading, .trailing], 20)
-                                .padding(.bottom, 5)
-                            
-                        
-                        
-                    
-                        // MARK: Serving Size Picker
+                    // MARK: Recipe Name
 
-                        VStack(alignment: .leading) {
-                            Text("Serving Size").font(.headline)
-                            Picker("Serving Size", selection: $servingSelection) {
-                                Text("2").tag(2)
-                                Text("4").tag(4)
-                                Text("6").tag(6)
-                                Text("8").tag(8)
-                            }.pickerStyle(SegmentedPickerStyle())
-                        }
-                        .padding([.leading, .bottom, .trailing], 20.0)
+                    Text(recipe.name)
+                        .font(Font.custom("Avenir Heavy", size: 24))
+                        .bold()
+                        .padding([.leading, .trailing], 20)
+                        .padding(.bottom, 5)
 
-                        // MARK: Ingredients
+                    // MARK: Serving Size Picker
 
-                        if recipeList.showIngredients {
-                            VStack(alignment: .leading) {
-                                Text("Ingredients").font(.headline).padding(.vertical, 5)
-                                ForEach(recipe.ingredients) { ingredient in
-
-                                    Text("• " + RecipeModel.getPortion(ingredient: ingredient, recipeServings: recipe.servings, targetServing: servingSelection) + " " + ingredient.name.lowercased())
-                                        .padding(.bottom, 3.0)
-                                }
-                            }.padding(.horizontal, 20)
-                        }
-
-                        // MARK: Directions
-
-                        if recipeList.showDirections {
-                            VStack(alignment: .leading) {
-                                Text("Directions").font(.headline).padding(.vertical, 5)
-
-                                ForEach(0 ..< recipe.directions.count, id: \.self) { index in
-
-                                    Text(String(index + 1) + ". " + recipe.directions[index])
-                                        .padding(.bottom, 3.0)
-                                }
-                            }
-                            .padding(.horizontal, 20)
-                        }
+                    VStack(alignment: .leading) {
+                        Text("Serving Size").font(.headline)
+                        Picker("Serving Size", selection: $servingSelection) {
+                            Text("2").tag(2)
+                            Text("4").tag(4)
+                            Text("6").tag(6)
+                            Text("8").tag(8)
+                        }.pickerStyle(SegmentedPickerStyle())
                     }
-                
-                //.cornerRadius(20)
-               // .shadow(radius: 20)
+                    .padding([.leading, .bottom, .trailing], 20.0)
+
+                    // MARK: Ingredients
+
+                    if recipeList.showIngredients {
+                        VStack(alignment: .leading) {
+                            Text("Ingredients")
+                                .font(Font.custom("Avenir Heavy", size: 16))
+                                .padding(.vertical, 5)
+                            ForEach(recipe.ingredients) { ingredient in
+
+                                Text("• " + RecipeModel.getPortion(ingredient: ingredient, recipeServings: recipe.servings, targetServing: servingSelection) + " " + ingredient.name.lowercased())
+                                    .padding(.bottom, 3.0)
+                            }
+                        }.padding(.horizontal, 20)
+                    }
+
+                    // MARK: Directions
+
+                    if recipeList.showDirections {
+                        VStack(alignment: .leading) {
+                            Text("Directions").font(Font.custom("Avenir Heavy", size: 16))
+                                .padding(.vertical, 5)
+
+                            ForEach(0 ..< recipe.directions.count, id: \.self) { index in
+
+                                Text(String(index + 1) + ". " + recipe.directions[index])
+                                    .padding(.bottom, 3.0)
+                            }
+                        }
+                        .padding(.horizontal, 20)
+                    }
+                }
+
+                // .cornerRadius(20)
+                // .shadow(radius: 20)
             }.navigationBarTitle(recipe.name)
         }
-       
     }
 }
 

@@ -42,6 +42,7 @@ struct RecipeTabView: View {
             SettingsView().tabItem {
                 VStack {
                     Image(systemName: "gearshape")
+                    Text("Settings")
                 }
             }.tag(4)
         }

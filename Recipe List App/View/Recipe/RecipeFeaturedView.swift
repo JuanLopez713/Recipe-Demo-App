@@ -17,7 +17,7 @@ struct RecipeFeaturedView: View {
             Text("Featured Recipes")
                 .padding(.leading, 20.0)
                 .padding(.top, 40.0)
-                .font(.largeTitle)
+                .font(Font.custom("Avenir Heavy", size: 24))
                 .bold()
             GeometryReader { geo in
                 TabView(selection: $tabSelectionIndex) {
@@ -62,9 +62,11 @@ struct RecipeFeaturedView: View {
                 .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .automatic))
             }
             VStack(alignment: .leading, spacing: 10.0) {
-                Text("Preparation Time").font(.headline)
-                Text(recipeList.recipes[tabSelectionIndex].prepTime)
-                Text("Highlight").font(.headline)
+                Text("Preparation Time")
+                    .font(Font.custom("Avenir Heavy", size: 16))
+                Text(recipeList.recipes[tabSelectionIndex].prepTime).font(Font.custom("Avenir", size: 16))
+                Text("Highlight")
+                    .font(Font.custom("Avenir Heavy", size: 16))
                 RecipeHighlights(highlights: recipeList.recipes[tabSelectionIndex].highlights)
 
             }.padding([.leading, .bottom], 20.0)
